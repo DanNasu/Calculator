@@ -1,0 +1,58 @@
+﻿body
+{
+    background-color: maroon;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-rows: repeat(6, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+                         "display display display display " 
+                         "button button button button"
+                         "button button button button"
+                         "button button button button"
+                         "button button button button"
+                         "negate decimal e exponent";
+    border: 1px solid black;
+    grid-gap: 2px;
+    background-color: blue;
+}  
+
+.gridContainer > * {
+    text-align: center;
+    font-size: 1em;
+}
+
+.gridContainer > button:hover{
+    font-weight: bold;
+    color: red;
+    background-color: darkcyan;
+}
+
+
+
+#display{
+    grid-area: display;
+    background-color: black;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    text-align: center;
+}
+
+
+#negate{
+    grid-area: negate;
+}
+
+#decimal{
+    grid-area: decimal;
+}
+
+#e{
+    grid-area: e;
+}
+
+#exponent{
+    grid-area: exponent;
+}
